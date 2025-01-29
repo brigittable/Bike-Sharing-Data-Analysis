@@ -1,4 +1,13 @@
 import pandas as pd
+import subprocess
+import sys
+
+try:
+    import seaborn as sns
+except ModuleNotFoundError:
+    print("🔴 Seaborn tidak ditemukan! Menginstall seaborn secara manual...")
+    subprocess.run([sys.executable, "-m", "pip", "install", "seaborn"])
+    
 import seaborn as sns
 import streamlit as st
 import plotly.express as px
