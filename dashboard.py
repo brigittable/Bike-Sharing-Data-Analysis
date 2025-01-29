@@ -152,8 +152,8 @@ st.subheader("🔍 Clustering Pola Penyewaan")
 
 
 # Gabungkan data berdasarkan tanggal ('dteday')
-df_hour = pd.read_csv(r'C:/Users/brigi/OneDrive/Documents/Coding/Python/proyek_analisis_data/hour.csv')
-df_day = pd.read_csv(r'C:/Users/brigi/OneDrive/Documents/Coding/Python/proyek_analisis_data/day.csv')
+df_hour = pd.read_csv('hour.csv')
+df_day = pd.read_csv('day.csv')
 df_merged = df_hour.merge(df_day, on="dteday", suffixes=("_hour", "_day"))
 
 # Pilih variabel yang digunakan untuk clustering
