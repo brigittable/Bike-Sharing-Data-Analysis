@@ -1,13 +1,4 @@
 import pandas as pd
-import subprocess
-import sys
-
-try:
-    import seaborn as sns
-except ModuleNotFoundError:
-    print("🔴 Seaborn tidak ditemukan! Menginstall seaborn secara manual...")
-    subprocess.run([sys.executable, "-m", "pip", "install", "seaborn"])
-    
 import seaborn as sns
 import streamlit as st
 import plotly.express as px
@@ -26,8 +17,8 @@ st.set_page_config(
 # ==================== Function Load Data ====================
 @st.cache_data
 def load_data():
-    df_hour = pd.read_csv(r'C:/Users/brigi/OneDrive/Documents/Coding/Python/proyek_analisis_data/hour.csv')
-    df_day = pd.read_csv(r'C:/Users/brigi/OneDrive/Documents/Coding/Python/proyek_analisis_data/day.csv')
+    df_hour = pd.read_csv('hour.csv')
+    df_day = pd.read_csv('day.csv')
     
     # Konversi dteday ke datetime
     df_hour['dteday'] = pd.to_datetime(df_hour['dteday'])
