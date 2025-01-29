@@ -2,7 +2,7 @@
 
 ## Setup Environment - Shell/Terminal
 mkdir proyek_analisis_data
-cd proyek_analisis_data
+\n cd proyek_analisis_data
 python -m venv .venv
 .venv\Scripts\activate (untuk Windows) .venv/bin/activate (macOS/Linux)
 
